@@ -1,1 +1,36 @@
+# RED     0;31
+# Black 	0;30
+# Blue 	  0;34
+# Green 	0;32
+# Cyan 	  0;36
+# Red 	  0;31
+# Purple 	0;35
+# Brown 	0;33
+# Blue 	  0;34
+# Green 	0;32
+# Cyan 	  0;36
+# Red 	  0;31
+# Purple 	0;35
+# Brown 	0;33
+
+BLACK="\[$(tput setaf 0)\]"
+RED="\[$(tput setaf 1)\]"
+GREEN="\[$(tput setaf 2)\]"
+YELLOW="\[$(tput setaf 3)\]"
+BLUE="\[$(tput setaf 4)\]"
+PURPLE="\[$(tput setaf 5)\]"
+CYAN="\[$(tput setaf 6)\]"
+WHITE="\[$(tput setaf 7)\]"
+GRAY="\[$(tput setaf 8)\]"
+BRIGHT_RED="\[$(tput setaf 9)\]"
+BRIGHT_GREEN="\[$(tput setaf 10)\]"
+BRIGHT_YELLOW="\[$(tput setaf 11)\]"
+BRIGHT_BLUE="\[$(tput setaf 12)\]"
+BRIGHT_PURPLE="\[$(tput setaf 13)\]"
+BRIGHT_CYAN="\[$(tput setaf 14)\]"
+RESET="\[$(tput sgr0)\]"
+
+PS1="${GRAY}my prompt${RESET}> "
+PS1="${RED}\u${RESET}@\w\n\$> "
+
 alias ll='ls -lia'
