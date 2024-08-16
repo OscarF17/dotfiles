@@ -7,6 +7,6 @@ return {
     vim.cmd([[GitBlameDisable]])
   end,
   keys = {
-    {"<leader>bG", "<cmd>GitBlameToggle<cr>", desc = "Toggle Git Blame"},
+    {"<leader>gB", "<cmd>GitBlameToggle<cr>", desc = "Toggle Git Blame"},
   }
 }

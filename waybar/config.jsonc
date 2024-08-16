@@ -9,15 +9,14 @@
     "modules-left": [
         "sway/workspaces",
         "sway/mode",
-        "sway/scratchpad",
-        "custom/media"
+        "sway/scratchpad"
     ],
         // "sway/window"
     "modules-center": [
     ],
     "modules-right": [
-        "idle_inhibitor",
         "tray",
+        "idle_inhibitor",
         "mpd",
         "pulseaudio",
         "cpu",
