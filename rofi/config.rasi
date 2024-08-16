@@ -1,0 +1,69 @@
+/* +================================+ */
+/*                                    */
+/*                                    */
+/*    ██████╗  ██████╗ ███████╗██╗    */
+/*    ██╔══██╗██╔═══██╗██╔════╝██║    */
+/*    ██████╔╝██║   ██║█████╗  ██║    */
+/*    ██╔══██╗██║   ██║██╔══╝  ██║    */
+/*    ██║  ██║╚██████╔╝██║     ██║    */
+/*    ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝    */
+/*                                    */
+/*                                    */
+/* +================================+ */
+
+
+/* Settings */
+configuration {
+	font: "Droid Sans Mono 14";
+	show-icons: true;
+	terminal: "/usr/bin/kitty";
+	window-thumbnail: true;
+	display-window: "Windows";
+	display-drun: "Apps";
+	display-run: "Run";
+	display-ssh: "SSH";
+    sidebar-mode: false;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+/* Styling */
+window {
+    width: 750;
+    height: 150;
+    padding: 15;
+    background-color: transparent;
+    /*
+    This is for the background of the whole window, overshadowed by entries and input field
+    background-color: #000;
+    */
+}
+
+inputbar {
+    children: [entry];
+    margin: 0 0 15 0;
+    /*
+    This is for the background of the entry field
+    */
+    background-color: #123457;
+    text-color: #fff;
+}
+
+entry {
+    border: 0 0 2 0;
+    /*
+    This is for the 'Type to filter' textbox
+    background-color: #632;
+    */
+}
+
+prompt {
+    text-color: #fff;
+}
+
+@theme "/usr/share/rofi/themes/material.rasi"
