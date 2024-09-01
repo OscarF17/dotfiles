@@ -31,7 +31,7 @@ return {
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
-        wrap = false, -- sets vim.opt.wrap
+        wrap = true, -- sets vim.opt.wrap
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -45,6 +45,8 @@ return {
       -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
+        ["<leader>Go"] = { "<cmd>DiffviewOpen<cr>", desc = "Open Diffview" },
+        ["<leader>gB"] = { "<cmd>GitBlameToggle<cr>", desc = "Toggle Git Blame" },
 
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },

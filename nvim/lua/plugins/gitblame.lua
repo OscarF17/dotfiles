@@ -2,11 +2,8 @@ return {
   "f-person/git-blame.nvim",
   name = "git-blame",
   config = function()
-    vim.cmd([[let gitblame_date_format = '%r']])
+    vim.cmd [[let gitblame_date_format = '%r']]
     -- Disabled by default
-    vim.cmd([[GitBlameDisable]])
+    vim.cmd [[GitBlameDisable]]
   end,
-  keys = {
-    {"<leader>gB", "<cmd>GitBlameToggle<cr>", desc = "Toggle Git Blame"},
-  }
 }
