@@ -47,6 +47,7 @@ return {
         n = {
           -- second key is the lefthand side of the map
           ["<leader>Go"] = { "<cmd>DiffviewOpen<cr>", desc = "Open Diffview" },
+          ["<leader>Gc"] = { "<cmd>DiffviewClose<cr>", desc = "Close Diffview" },
           ["<leader>gB"] = { "<cmd>GitBlameToggle<cr>", desc = "Toggle Git Blame" },
 
           -- navigate buffer tabs
