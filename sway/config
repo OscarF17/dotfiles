@@ -7,6 +7,7 @@ exec_always gammastep -O 4500
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 exec dunst
+exec swaymsg layout tabbed
 
 # Set terminal emulator 
 set $term kitty 
