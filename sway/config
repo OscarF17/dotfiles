@@ -17,6 +17,11 @@ set $term kitty
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output * background /home/oscar/dotfiles/wallpapers/skull.jpg fill
 
+# Set default workspace for programs
+# Use  swaymsg -t get_tree to get class
+assign [class="waterfox"] workspace 1
+assign [class="discord"] workspace 4
+
 ### Bar settings
 bar {
 	swaybar_command waybar
