@@ -22,6 +22,16 @@ output * background /home/oscar/dotfiles/wallpapers/skull.jpg fill
 assign [class="waterfox"] workspace 1
 assign [class="discord"] workspace 4
 
+# Set default mode for specific programs
+for_window [class="Pinentry-gtk"] floating enable
+for_window [app_id="org.speedcrunch.speedcrunch"] floating enable, resize set width 500 height 800 
+# Set all Steam related windows as floating
+for_window [class="steam"] floating enable
+for_window [class="steam" title="Friends List"] resize set width 500 height 500
+# Set the actual Steam page as tabbed
+for_window [title="Steam"] floating disable
+for_window [title="steam_app_*"] floating disable, fullscreen enable
+
 ### Bar settings
 bar {
 	swaybar_command waybar
