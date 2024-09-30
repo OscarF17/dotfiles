@@ -33,3 +33,6 @@ RESET="\[$(tput sgr0)\]"
 PS1="\n${RED}\u${RESET}@\w\n\$> "
 
 alias ll='ls -lia'
+
+alias block-sites='sudo /home/oscar/dotfiles/scripts/block'
+alias unblock-sites='sudo /home/oscar/dotfiles/scripts/unblock'
