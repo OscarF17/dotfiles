@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# File containing list of websites to unblock (one per line)
+UNBLOCKED_SITES_FILE="blocked_sites.txt"
+
+# Check if the file exists
+if [[ ! -f $UNBLOCKED_SITES_FILE ]]; then
+    echo "The file $UNBLOCKED_SITES_FILE does not exist."
+    exit 1
+fi
+
+# Get root privileges
+if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root."
+    exit 1
+fi
+
+# Loop through unblocked sites and remove them from hosts file
+while read -r site; do
+    if [[ ! -z "$site" ]]; then  # Ensure the line isn't empty
+        if grep -q "$site" /etc/hosts; then
+            echo "Unblocking $site..."
+            sed -i "/$site/d" /etc/hosts
+        else
+            echo "$site is already unblocked."
+        fi
+    fi
+done < "$UNBLOCKED_SITES_FILE"
+
+echo "All sites have been unblocked."
+
