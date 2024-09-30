@@ -5,7 +5,7 @@
 # Restart browser for changes to take effect
 
 # File containing list of websites to unblock (one per line)
-BLOCKED_SITES_FILE="blocked_sites.txt"
+BLOCKED_SITES_FILE="/home/oscar/dotfiles/scripts/blocked_sites.txt"
 
 # Check if the file exists
 if [[ ! -f $BLOCKED_SITES_FILE ]]; then

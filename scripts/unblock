@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# Unblock websites by editing /etc/hosts file
+# Script removes '127.0.0.1 [website]' at the end of the file
+# Restart browser for changes to take effect
+
 # File containing list of websites to unblock (one per line)
-UNBLOCKED_SITES_FILE="blocked_sites.txt"
+UNBLOCKED_SITES_FILE="/home/oscar/dotfiles/scripts/blocked_sites.txt"
 
 # Check if the file exists
 if [[ ! -f $UNBLOCKED_SITES_FILE ]]; then
