@@ -8,6 +8,7 @@ exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 exec dunst
 exec swaymsg layout tabbed
+exec logseq
 
 # Set terminal emulator 
 set $term kitty 
@@ -31,6 +32,8 @@ for_window [class="steam" title="Friends List"] resize set width 500 height 500
 # Set the actual Steam page as tabbed
 for_window [title="Steam"] floating disable
 for_window [title="steam_app_*"] floating disable, fullscreen enable
+# Set Logseq to open in scratchpad
+for_window [class="Logseq"] move scratchpad
 
 ### Bar settings
 bar {
