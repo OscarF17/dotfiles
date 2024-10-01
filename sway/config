@@ -33,7 +33,7 @@ for_window [class="steam" title="Friends List"] resize set width 500 height 500
 for_window [title="Steam"] floating disable
 for_window [title="steam_app_*"] floating disable, fullscreen enable
 # Set Logseq to open in scratchpad
-for_window [class="Logseq"] move scratchpad
+for_window [class="Logseq"] floating enable, resize set width 1250 height 900, move scratchpad
 
 ### Bar settings
 bar {
