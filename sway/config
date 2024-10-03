@@ -35,6 +35,10 @@ for_window [title="Steam"] floating disable
 for_window [title="steam_app_*"] floating disable, fullscreen enable
 # Set Logseq to open in scratchpad
 for_window [class="Logseq"] floating enable, resize set width 1250 height 900, move scratchpad
+# Set Thunar to open on the right side of the screen, vertically alligned
+# Sway considers 0 0 to be the upper left corner of the window
+# This position considers a 1920x1080 screen
+for_window [app_id="thunar"] floating enable, resize set width 700 height 700, move position 1220 190, move scratchpad
 
 ### Bar settings
 bar {
