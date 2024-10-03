@@ -10,5 +10,5 @@ then
         swaymsg [class="Logseq"] focus
     fi
 else
-    foot -a files lf
+    logseq
 fi

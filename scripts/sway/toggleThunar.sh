@@ -10,5 +10,5 @@ then
         swaymsg [app_id="thunar"] focus
     fi
 else
-    foot -a files lf
+    thunar
 fi
