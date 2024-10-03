@@ -18,7 +18,7 @@ set $term kitty
 ### Output configuration
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * background /home/oscar/dotfiles/wallpapers/skull.jpg fill
+output * background ~/dotfiles/wallpapers/skull.jpg fill
 
 # Set default workspace for programs
 # Use  swaymsg -t get_tree to get class
@@ -68,8 +68,8 @@ bindsym $mod+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
 bindsym Mod1+tab workspace back_and_forth
 bindsym $mod+tab workspace next_on_output 
 bindsym $mod+x workspace prev_on_output
-bindsym $mod+n exec /home/oscar/dotfiles/scripts/sway/toggleLogseq.sh
-bindsym $mod+e exec /home/oscar/dotfiles/scripts/sway/toggleThunar.sh
+bindsym $mod+n exec ~/dotfiles/scripts/sway/toggleLogseq.sh
+bindsym $mod+e exec ~/dotfiles/scripts/sway/toggleThunar.sh
 
 # Set media keys
 # bindsym --locked XF86AudioPlay exec playerctl play-pause
