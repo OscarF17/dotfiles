@@ -9,6 +9,7 @@ exec wl-paste --type image --watch cliphist store
 exec dunst
 exec swaymsg layout tabbed
 exec logseq
+exec thunar 
 exec git -C /home/oscar/notes pull
 
 # Set terminal emulator 
