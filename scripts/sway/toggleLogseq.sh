@@ -2,7 +2,7 @@
 
 if swaymsg -t get_tree | grep 'Logseq';
 then
-    cur_focus="$(swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.focused==true) | .name')"
+    cur_focus="$(swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.focused==true) | .window_properties.class')"
 
     if [ "$cur_focus" == "Logseq" ]; then
         swaymsg scratchpad show
