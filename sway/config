@@ -40,6 +40,7 @@ for_window [class="Logseq"] floating enable, resize set width 1700 height 900, m
 # Sway considers 0 0 to be the upper left corner of the window
 # This position considers a 1920x1080 screen
 for_window [app_id="thunar"] floating enable, resize set width 700 height 700, move position 1220 190, move scratchpad
+for_window [class="Spotify"] floating enable, resize set width 1700 height 900, move scratchpad
 
 ### Bar settings
 bar {
@@ -70,6 +71,7 @@ bindsym $mod+tab workspace next_on_output
 bindsym $mod+x workspace prev_on_output
 bindsym $mod+n exec ~/dotfiles/scripts/sway/toggleLogseq.sh
 bindsym $mod+e exec ~/dotfiles/scripts/sway/toggleThunar.sh
+bindsym $mod+m exec ~/dotfiles/scripts/sway/toggleSpotify.sh
 
 # Set media keys
 # bindsym --locked XF86AudioPlay exec playerctl play-pause
