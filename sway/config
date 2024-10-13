@@ -27,7 +27,7 @@ assign [class="discord"] workspace 4
 
 # Set default mode for specific programs
 for_window [class="Pinentry-gtk"] floating enable
-for_window [app_id="org.speedcrunch.speedcrunch"] floating enable, resize set width 500 height 800 
+for_window [app_id="org.speedcrunch.speedcrunch"] floating enable, resize set width 500 height 800, move scratchpad
 # Set all Steam related windows as floating
 for_window [class="steam"] floating enable
 for_window [class="steam" title="Friends List"] resize set width 500 height 500
@@ -72,6 +72,7 @@ bindsym $mod+x workspace prev_on_output
 bindsym $mod+n exec ~/dotfiles/scripts/sway/toggleLogseq.sh
 bindsym $mod+e exec ~/dotfiles/scripts/sway/toggleThunar.sh
 bindsym $mod+m exec ~/dotfiles/scripts/sway/toggleSpotify.sh
+bindsym --locked XF86Keyboard exec ~/dotfiles/scripts/sway/toggleSpeedcrunch.sh
 
 # Set media keys
 # bindsym --locked XF86AudioPlay exec playerctl play-pause
@@ -82,6 +83,7 @@ bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 # bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym --locked XF86MonBrightnessUp exec brightnessctl s +5%
 bindsym --locked XF86MonBrightnessDown exec brightnessctl s 5%-
+bindsym --locked XF86Tools exec kitty /home/oscar/dotfiles/
 
 
 # Take screenshots
