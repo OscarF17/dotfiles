@@ -500,3 +500,15 @@ foreground = "#FFFFFF"  # White text
 frame_color = "#23272A" # Discord dark gray
 max_icon_size = 64
 min_icon_size = 64
+
+[low_battery]
+summary = "LOW BATTERY"
+background = "#EED202"  # Orange
+foreground = "#000000"  # White text
+frame_color = "#EED202" # Red border
+
+[critical_battery]
+summary = "BATTERY CRITICAL"
+background = "#FF0000"  # Orange
+foreground = "#FFFFFF"  # White text
+frame_color = "#FF0000" # Red border
