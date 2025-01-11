@@ -11,6 +11,7 @@ exec swaymsg layout tabbed
 exec logseq
 exec thunar 
 exec git -C /home/oscar/notes pull
+exec /home/oscar/dotfiles/scripts/batCheck.sh
 
 # Set terminal emulator 
 set $term kitty 
