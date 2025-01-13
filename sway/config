@@ -3,7 +3,7 @@ font pango: DroidSansMono Medium 14
 set $mod Mod4
 
 ### Execute on start up / reset
-exec_always gammastep -O 4500
+exec gammastep -O 4500
 exec wl-paste --type text --watch cliphist store
 exec wl-paste --type image --watch cliphist store
 exec dunst
