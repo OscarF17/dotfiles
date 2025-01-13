@@ -1,4 +1,4 @@
-font pango: DroidSansMono Medium 14
+font pango: DroidSansMono Medium 0.1
 
 set $mod Mod4
 
