@@ -74,6 +74,7 @@ bindsym $mod+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
 bindsym Mod1+tab workspace back_and_forth
 bindsym $mod+tab workspace next_on_output 
 bindsym $mod+x workspace prev_on_output
+bindsym $mod+d workspace d
 bindsym $mod+n exec ~/dotfiles/scripts/sway/toggleLogseq.sh
 bindsym $mod+e exec ~/dotfiles/scripts/sway/toggleThunar.sh
 bindsym $mod+m exec ~/dotfiles/scripts/sway/toggleSpotify.sh
