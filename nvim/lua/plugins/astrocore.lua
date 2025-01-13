@@ -49,6 +49,13 @@ return {
           ["<leader>Go"] = { "<cmd>DiffviewOpen<cr>", desc = "Open Diffview" },
           ["<leader>Gc"] = { "<cmd>DiffviewClose<cr>", desc = "Close Diffview" },
           ["<leader>gB"] = { "<cmd>GitBlameToggle<cr>", desc = "Toggle Git Blame" },
+          ["<leader>q"] = {
+            function()
+              vim.cmd "Neotree close"
+              vim.cmd "confirm q"
+            end,
+            desc = "Quit Window",
+          },
 
           -- navigate buffer tabs
           ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
