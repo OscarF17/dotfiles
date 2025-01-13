@@ -23,9 +23,9 @@
         "sway/language",
         "power-profiles-daemon",
         "backlight",
-        "pulseaudio",
         "battery",
         "battery#bat2",
+        "pulseaudio",
         "clock"
     ],
     // Modules configuration

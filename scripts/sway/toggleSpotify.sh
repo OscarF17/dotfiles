@@ -1,14 +1,14 @@
 #!/usr/bin/bash
 
-if swaymsg -t get_tree | grep 'Logseq';
+if swaymsg -t get_tree | grep 'Spotify';
 then
     cur_focus="$(swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.focused==true) | .window_properties.class')"
 
-    if [ "$cur_focus" == "Logseq" ]; then
+    if [ "$cur_focus" == "Spotify" ]; then
         swaymsg scratchpad show
     else
-        swaymsg [class="Logseq"] focus
+        swaymsg [class="Spotify"] focus
     fi
 else
-    logseq
+    spotify
 fi
