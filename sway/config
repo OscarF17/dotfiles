@@ -28,6 +28,7 @@ assign [class="discord"] workspace 4
 
 # Set default mode for specific programs
 for_window [class="Pinentry-gtk"] floating enable
+for_window [title="Picture-in-Picture"] floating enable, resize set width 532 height 300
 for_window [app_id="org.speedcrunch.speedcrunch"] floating enable, resize set width 500 height 800, move scratchpad
 # Set all Steam related windows as floating
 for_window [class="steam"] floating enable
