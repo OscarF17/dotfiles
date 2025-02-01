@@ -61,6 +61,9 @@ return {
           ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
           ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
+          -- toggle markdown rendering
+          ["<leader>md"] = { function() require("render-markdown").toggle() end, desc = "Toggle Markdown renderer" },
+
           -- mappings seen under group name "Buffer"
           ["<Leader>bd"] = {
             function()
