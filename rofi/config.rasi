@@ -14,7 +14,7 @@
 
 /* Settings */
 configuration {
-	font: "DroidSansM Nerd Font 14";
+	font: "CodeNewRoman Nerd Font Mono 16";
 	show-icons: true;
 	terminal: "/usr/bin/kitty";
 	window-thumbnail: true;
