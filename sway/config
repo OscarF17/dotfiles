@@ -24,6 +24,7 @@ output * background ~/dotfiles/wallpapers/skull.jpg fill
 # Set default workspace for programs
 # Use  swaymsg -t get_tree to get class
 assign [app_id="waterfox"] workspace 1
+assign [app_id="firefox"] workspace 1
 assign [class="discord"] workspace 4
 
 # Set default mode for specific programs
