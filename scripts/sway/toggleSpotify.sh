@@ -10,5 +10,5 @@ then
         swaymsg [class="Spotify"] focus
     fi
 else
-    spotify
+    spotify-launcher
 fi
