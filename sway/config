@@ -54,6 +54,10 @@ bar {
 
 ### Input settings
 
+input type:pointer {
+    accel_profile flat
+}
+
 input type:touchpad {
     tap enabled
     natural_scroll enabled 
