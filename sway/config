@@ -19,7 +19,9 @@ set $term kitty
 ### Output configuration
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * background ~/dotfiles/wallpapers/skull.jpg fill
+output * background ~/dotfiles/wallpapers/skull-knight.png fill
+output DP-1 pos 0 0 mode 2560x1440@179.999Hz
+output DP-2 pos 2560 0 res 1080x1920@60Hz transform 90
 
 # Set default workspace for programs
 # Use  swaymsg -t get_tree to get class
@@ -84,6 +86,8 @@ bindsym $mod+n exec ~/dotfiles/scripts/sway/toggleLogseq.sh
 bindsym $mod+e exec ~/dotfiles/scripts/sway/toggleThunar.sh
 bindsym $mod+m exec ~/dotfiles/scripts/sway/toggleSpotify.sh
 bindsym --locked XF86Keyboard exec ~/dotfiles/scripts/sway/toggleSpeedcrunch.sh
+bindsym $mod+Ctrl+Right move workspace to output right
+bindsym $mod+Ctrl+Left move workspace to output left 
 
 # Set media keys
 bindsym --locked XF86AudioPlay exec playerctl play-pause
