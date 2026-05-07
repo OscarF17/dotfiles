@@ -1,14 +1,18 @@
 #!/usr/bin/bash
 
-if swaymsg -t get_tree | grep 'Spotify';
-then
-    cur_focus="$(swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.focused==true) | .window_properties.class')"
+CLASS="Spotify"
+EXEC="spotify-launcher"
 
-    if [ "$cur_focus" == "Spotify" ]; then
-        swaymsg scratchpad show
-    else
-        swaymsg [class="Spotify"] focus
-    fi
+RUNNING=$(swaymsg -t get_tree | jq -r ".. | select(.window_properties? .class == \"$CLASS\") | .class" | head -n 1)
+
+if [ -z "$RUNNING" ]; then
+    $EXEC &
 else
-    spotify-launcher
+    FOCUSED=$(swaymsg -t get_tree | jq -r ".. | select(.window_properties? .class == \"$CLASS\") | .focused")
+    if [ "$FOCUSED" == "true" ]; then
+        swaymsg "[class=\"$CLASS\"] move scratchpad"
+    else
+        swaymsg "[class=\"$CLASS\"] move container to workspace current"
+        swaymsg "[class=\"$CLASS\"] focus"
+    fi
 fi

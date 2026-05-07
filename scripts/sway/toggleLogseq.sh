@@ -1,12 +1,18 @@
 #!/usr/bin/bash
 
 CLASS="Logseq"
+EXEC="logseq"
 
-FOCUSED=$(swaymsg -t get_tree | jq -r ".. | select(.window_properties? .class == \"$CLASS\") | .focused")
+RUNNING=$(swaymsg -t get_tree | jq -r ".. | select(.window_properties? .class == \"$CLASS\") | .class" | head -n 1)
 
-if [ "$FOCUSED" == "true" ]; then
-    swaymsg "[class=\"$CLASS\"] move scratchpad"
+if [ -z "$RUNNING" ]; then
+    $EXEC &
 else
-    swaymsg "[class=\"$CLASS\"] move container to workspace current"
-    swaymsg "[class=\"$CLASS\"] focus"
+    FOCUSED=$(swaymsg -t get_tree | jq -r ".. | select(.window_properties? .class == \"$CLASS\") | .focused")
+    if [ "$FOCUSED" == "true" ]; then
+        swaymsg "[class=\"$CLASS\"] move scratchpad"
+    else
+        swaymsg "[class=\"$CLASS\"] move container to workspace current"
+        swaymsg "[class=\"$CLASS\"] focus"
+    fi
 fi
