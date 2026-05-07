@@ -1,14 +1,12 @@
 #!/usr/bin/bash
 
-if swaymsg -t get_tree | grep 'Logseq';
-then
-    cur_focus="$(swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.focused==true) | .window_properties.class')"
+CLASS="Logseq"
 
-    if [ "$cur_focus" == "Logseq" ]; then
-        swaymsg scratchpad show
-    else
-        swaymsg [class="Logseq"] focus
-    fi
+FOCUSED=$(swaymsg -t get_tree | jq -r ".. | select(.window_properties? .class == \"$CLASS\") | .focused")
+
+if [ "$FOCUSED" == "true" ]; then
+    swaymsg "[class=\"$CLASS\"] move scratchpad"
 else
-    logseq
+    swaymsg "[class=\"$CLASS\"] move container to workspace current"
+    swaymsg "[class=\"$CLASS\"] focus"
 fi
