@@ -2,7 +2,7 @@
 
 local keymap = vim.keymap.set
 
-keymap("n", "<leader>q", "<cmd>confirm q<CR>", { desc = "Close window" })
+keymap("n", "<leader>q", "<cmd>Neotree close<CR><cmd>confirm q<CR>", { desc = "Close window" })
 
 -- Move between windows using Ctrl + hjkl
 keymap("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
