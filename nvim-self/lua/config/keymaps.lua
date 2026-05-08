@@ -24,14 +24,3 @@ vim.keymap.set("n", "<leader>th", "<cmd>Telescope colorscheme enable_preview=tru
 
 -- Lazygit
 vim.keymap.set("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", { desc = "Toggle LazyGit" })
-
-local Terminal = require('toggleterm.terminal').Terminal
-local lazygit = Terminal:new({ 
-  cmd = "lazygit", 
-  hidden = true, 
-  direction = "float" 
-})
-
-function _lazygit_toggle()
-  lazygit:toggle()
-end
