@@ -30,3 +30,6 @@ vim.opt.mouse = "a"
 
 -- Wrap long lines of text to the next line visually
 vim.opt.wrap = true 
+
+-- Copy commands also copy to system clipboard
+vim.opt.clipboard = "unnamedplus"
