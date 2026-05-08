@@ -4,6 +4,9 @@ local keymap = vim.keymap.set
 
 keymap("n", "<leader>q", "<cmd>Neotree close<CR><cmd>confirm q<CR>", { desc = "Close window" })
 
+-- Clear search highlights when pressing ESC in Normal Mode
+keymap("n", "<Esc>", "<cmd>nohlsearch<CR><Esc>", { desc = "Clear highlights and escape" })
+
 -- Move between windows using Ctrl + hjkl
 keymap("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 keymap("n", "<C-j>", "<C-w>j", { desc = "Move to bottom window" })
