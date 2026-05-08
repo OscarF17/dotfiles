@@ -2,7 +2,7 @@
 
 local keymap = vim.keymap.set
 
-keymap("n", "<leader>q", "<cmd>Neotree close<CR><cmd>confirm q<CR>", { desc = "Close window" })
+keymap("n", "<leader>q", "<cmd>confirm q<CR>", { desc = "Close window" })
 
 -- Clear search highlights when pressing ESC in Normal Mode
 keymap("n", "<Esc>", "<cmd>nohlsearch<CR><Esc>", { desc = "Clear highlights and escape" })
