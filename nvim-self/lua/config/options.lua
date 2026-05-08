@@ -33,3 +33,6 @@ vim.opt.wrap = true
 
 -- Copy commands also copy to system clipboard
 vim.opt.clipboard = "unnamedplus"
+
+-- Use 24-bit RGB colors
+vim.opt.termguicolors = true

@@ -27,3 +27,8 @@ vim.keymap.set("n", "<leader>th", "<cmd>Telescope colorscheme enable_preview=tru
 
 -- Lazygit
 vim.keymap.set("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", { desc = "Toggle LazyGit" })
+
+-- Buffers
+keymap("n", "<leader>p", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev Buffer" })
+keymap("n", "<leader>n", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Buffer" })
+keymap("n", "<leader>c", "<cmd>bdelete<cr>", { desc = "Close Buffer" })
