@@ -18,3 +18,17 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find f
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+-- Lazygit
+vim.keymap.set("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", { desc = "Toggle LazyGit" })
+
+local Terminal = require('toggleterm.terminal').Terminal
+local lazygit = Terminal:new({ 
+  cmd = "lazygit", 
+  hidden = true, 
+  direction = "float" 
+})
+
+function _lazygit_toggle()
+  lazygit:toggle()
+end
