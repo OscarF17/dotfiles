@@ -1,8 +1,8 @@
-# AstroNvim Template
+# AstroNvim 
+This is my personal configuration of AstroNvim. I mostly changed hotkeys and added a handful of plugins to provide more features.
 
-**NOTE:** This is for AstroNvim v4+
-
-A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+> [!WARNING]
+> I am no longer using this configuration and have moved on to a self-made setup, you can find it [here](https://github.com/OscarF17/dotfiles/tree/main/nvim-self).
 
 ## 🛠️ Installation
 
