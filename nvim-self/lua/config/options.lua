@@ -8,10 +8,10 @@ vim.opt.relativenumber = true
 vim.opt.expandtab = true
 
 -- The number of spaces a Tab character represents
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 
 -- The number of spaces used for each level of automatic indentation
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 
 -- Highlight the search results as you type your search query
 vim.opt.incsearch = true
