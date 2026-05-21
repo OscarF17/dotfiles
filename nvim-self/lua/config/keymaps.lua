@@ -34,4 +34,4 @@ vim.keymap.set("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", { desc = "To
 -- Buffers
 keymap("n", "<leader>p", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev Buffer" })
 keymap("n", "<leader>n", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Buffer" })
-keymap("n", "<leader>c", "<cmd>bdelete<cr>", { desc = "Close Buffer" })
+keymap("n", "<leader>c", "<cmd>Bdelete<cr>", { desc = "Close Buffer" })
