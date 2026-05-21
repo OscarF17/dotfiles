@@ -1,3 +1,5 @@
+-- Manage multiple open terminals within a single window
+-- Originally added to allow Lazygit (Git TUI) to display properly
 return {
     'akinsho/toggleterm.nvim', 
     version = "*", 

@@ -1,3 +1,4 @@
+-- Add tabs at the top of window for currently open buffer
 return {
     'akinsho/bufferline.nvim', 
     version = "*", 

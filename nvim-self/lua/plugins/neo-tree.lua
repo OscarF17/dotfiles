@@ -1,3 +1,4 @@
+-- File manager sidebar
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",

@@ -1,3 +1,4 @@
+-- Inline Git integration in buffers, show working changes
 return {
     "lewis6991/gitsigns.nvim",
     opts = {

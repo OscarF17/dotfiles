@@ -1,3 +1,4 @@
+-- Fuzzy finder
 return {
     'nvim-telescope/telescope.nvim', version = '*',
     dependencies = {
