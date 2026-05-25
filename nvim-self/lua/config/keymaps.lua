@@ -7,6 +7,10 @@ keymap("n", "<C-s>", "<cmd>w<CR>", { desc = "Save file" })
 keymap("i", "<C-s>", "<cmd>w<CR>", { desc = "Save file" })
 keymap("v", "<C-s>", "<cmd>w<CR>", { desc = "Save file" })
 
+-- Navigation, move vertically withing single lines that wrap
+keymap("n", "j", "gj", { desc = "Move cursor down one line" })
+keymap("n", "k", "gk", { desc = "Move cursor up one line" })
+
 -- Clear search highlights when pressing ESC in Normal Mode
 keymap("n", "<Esc>", "<cmd>nohlsearch<CR><Esc>", { desc = "Clear highlights and escape" })
 
