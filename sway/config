@@ -12,6 +12,7 @@ exec logseq
 exec git -C /home/oscar/notes pull
 exec /home/oscar/dotfiles/scripts/batCheck.sh
 exec gsr-ui
+exec kanshi
 
 # Set terminal emulator 
 set $term kitty 
