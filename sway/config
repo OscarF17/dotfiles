@@ -22,7 +22,7 @@ set $term kitty
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output DP-1 pos 0 0 mode 2560x1440@179.999Hz
 output DP-2 pos 2560 0 res 1080x1920@60Hz transform 90
-output DP-1 background ~/dotfiles/wallpapers/knight.png fill
+output DP-1 background ~/dotfiles/wallpapers/skull-knight.png fill
 output DP-2 background ~/dotfiles/wallpapers/vertical/circuits.jpg fit 
 
 # Set default workspace for programs
